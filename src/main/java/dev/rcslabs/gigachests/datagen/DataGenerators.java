@@ -24,8 +24,8 @@ public class DataGenerators {
 
         //Providers
         generator.addProvider(true, blockTagsProvider);
-        generator.addProvider(true, new ModRecipeProvider(packOutput, lookupProvider));
-
+        generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
+        generator.addProvider(true, new ModModelProvider(packOutput));
 
     }
 

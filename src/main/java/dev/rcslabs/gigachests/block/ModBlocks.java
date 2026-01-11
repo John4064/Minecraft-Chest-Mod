@@ -22,9 +22,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OMEGA_CHEST = registerBlock("omega_chest",
             (properties) -> new Block(properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
-//            registerBlock("omega_chest",
-//            () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
-
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
