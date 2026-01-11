@@ -10,8 +10,10 @@ public class ModItems {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GigaChests.MOD_ID);
 
-    public static final DeferredItem<Item> UPGRADE_ROCK = ITEMS.register("upgrade_rock",
-            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> UPGRADE_ROCK = ITEMS.registerItem("upgrade_rock",
+            Item::new);
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

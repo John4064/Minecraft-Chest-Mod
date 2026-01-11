@@ -40,21 +40,21 @@ public class GigaChests {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-//        modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-//    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-//        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-//            event.accept(ModItems.UPGRADE_ROCK);
-//        }
-//
-//        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-//            event.accept(ModBlocks.OMEGA_CHEST);
-//        }
-//    }
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.UPGRADE_ROCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.OMEGA_CHEST);
+        }
+    }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
